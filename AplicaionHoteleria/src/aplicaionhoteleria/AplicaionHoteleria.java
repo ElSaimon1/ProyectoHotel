@@ -7,7 +7,7 @@ public class AplicaionHoteleria {
 
   
     public static void main(String[] args) {
-        System.out.println("Wenas");
+        System.out.println("Wenas lo cabro");
     }
     
 }
