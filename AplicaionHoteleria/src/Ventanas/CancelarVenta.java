@@ -77,21 +77,33 @@ public class CancelarVenta extends javax.swing.JFrame {
 
         jtbl_datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Nombre Cliente", "Rut", "Fecha Inicio", "Fecha Fin"
+                "Nombre Cliente", "Rut", "Fecha Inicio", "Fecha Fin", "Tipo Habitacion"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        jtbl_datos.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                jtbl_datosComponentAdded(evt);
             }
         });
         jScrollPane1.setViewportView(jtbl_datos);
@@ -138,7 +150,7 @@ public class CancelarVenta extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Cancelar Reservacion");
 
-        jbtn_cancelar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jbtn_cancelar.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
         jbtn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cubo-de-la-basura.png"))); // NOI18N
         jbtn_cancelar.setText("Eliminar");
         jbtn_cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -165,14 +177,14 @@ public class CancelarVenta extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(101, 101, 101)
-                                .addComponent(jLabel1)))
-                        .addGap(18, 18, 18)
+                                .addComponent(jLabel1))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jbtn_cancelar)
-                            .addComponent(jbtn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jbtn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbtn_cancelar)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
@@ -223,6 +235,10 @@ public class CancelarVenta extends javax.swing.JFrame {
     private void jbtn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_buscarActionPerformed
+
+    private void jtbl_datosComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jtbl_datosComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtbl_datosComponentAdded
 //
 //    /**
 //     * @param args the command line arguments
