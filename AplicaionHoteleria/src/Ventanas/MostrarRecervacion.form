@@ -60,7 +60,7 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="jbtn_salir" min="-2" pref="113" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jbtn_buscar1" pref="152" max="32767" attributes="0"/>
+                              <Component id="jbtn_buscarTodo" pref="152" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -80,7 +80,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jbtn_buscar1" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="jbtn_buscarTodo" min="-2" pref="51" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jbtn_salir" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
@@ -248,7 +248,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn_buscarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbtn_buscar1">
+        <Component class="javax.swing.JButton" name="jbtn_buscarTodo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="15" style="3"/>
@@ -259,7 +259,7 @@
             <Property name="text" type="java.lang.String" value="Buscar todo"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn_buscar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn_buscarTodoActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

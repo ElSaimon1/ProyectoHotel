@@ -36,7 +36,7 @@ public class MostrarRecervacion extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jtxt_nombre = new javax.swing.JTextPane();
         jbtn_buscar = new javax.swing.JButton();
-        jbtn_buscar1 = new javax.swing.JButton();
+        jbtn_buscarTodo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,12 +114,12 @@ public class MostrarRecervacion extends javax.swing.JFrame {
             }
         });
 
-        jbtn_buscar1.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
-        jbtn_buscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
-        jbtn_buscar1.setText("Buscar todo");
-        jbtn_buscar1.addActionListener(new java.awt.event.ActionListener() {
+        jbtn_buscarTodo.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
+        jbtn_buscarTodo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
+        jbtn_buscarTodo.setText("Buscar todo");
+        jbtn_buscarTodo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_buscar1ActionPerformed(evt);
+                jbtn_buscarTodoActionPerformed(evt);
             }
         });
 
@@ -141,7 +141,7 @@ public class MostrarRecervacion extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jbtn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jbtn_buscar1, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)))
+                            .addComponent(jbtn_buscarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -155,7 +155,7 @@ public class MostrarRecervacion extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbtn_buscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbtn_buscarTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jbtn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -192,9 +192,9 @@ public class MostrarRecervacion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_buscarActionPerformed
 
-    private void jbtn_buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscar1ActionPerformed
+    private void jbtn_buscarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscarTodoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbtn_buscar1ActionPerformed
+    }//GEN-LAST:event_jbtn_buscarTodoActionPerformed
 //
 //    /**
 //     * @param args the command line arguments
@@ -239,7 +239,7 @@ public class MostrarRecervacion extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton jbtn_buscar;
-    private javax.swing.JButton jbtn_buscar1;
+    private javax.swing.JButton jbtn_buscarTodo;
     private javax.swing.JButton jbtn_salir;
     private javax.swing.JLabel jlbl_Nombre;
     private javax.swing.JTextPane jtxt_nombre;

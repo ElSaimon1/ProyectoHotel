@@ -14,7 +14,6 @@ public class Reservacion {
     
     private String NombreCL, rut, Habitacion;
     private Date FechaIn, FechaFin;
-    private boolean insumos;
 
     public Reservacion() {
     }
@@ -25,7 +24,6 @@ public class Reservacion {
         this.Habitacion = Habitacion;
         this.FechaIn = FechaIn;
         this.FechaFin = FechaFin;
-        this.insumos = insumos;
     }
 
     public String getNombreCL() {
@@ -68,18 +66,14 @@ public class Reservacion {
         this.FechaFin = FechaFin;
     }
 
-    public boolean isInsumos() {
-        return insumos;
-    }
-
-    public void setInsumos(boolean insumos) {
-        this.insumos = insumos;
-    }
-
     @Override
     public String toString() {
-        return "Reservacion{" + "NombreCL=" + NombreCL + ", rut=" + rut + ", Habitacion=" + Habitacion + ", FechaIn=" + FechaIn + ", FechaFin=" + FechaFin + ", insumos=" + insumos + '}';
+        return "Reservacion{" + "NombreCL=" + NombreCL + ", rut=" + rut + ", Habitacion=" + Habitacion + ", FechaIn=" + FechaIn + ", FechaFin=" + FechaFin + '}';
     }
+
+    
+
+    
     
     
 }
