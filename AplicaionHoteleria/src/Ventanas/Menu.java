@@ -30,10 +30,11 @@ public class Menu extends javax.swing.JFrame {
         jlblBienvenido = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jbtn_cancelar = new javax.swing.JButton();
+        jbtn_modificar = new javax.swing.JButton();
         jbtn_Mostrar = new javax.swing.JButton();
         jbtn_Reservasion = new javax.swing.JButton();
         jbtn_cancelar1 = new javax.swing.JButton();
+        jbtn_salir = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -51,7 +52,6 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 0));
 
         jlblBienvenido.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
-        jlblBienvenido.setForeground(new java.awt.Color(0, 0, 0));
         jlblBienvenido.setText("Bienvenido a Hotel Continental ");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/images.png"))); // NOI18N
@@ -62,14 +62,13 @@ public class Menu extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jlblBienvenido)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(jlblBienvenido)
+                .addContainerGap(40, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(141, 141, 141)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,18 +82,18 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
 
-        jbtn_cancelar.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
-        jbtn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
-        jbtn_cancelar.setText("Modificar Reservacion");
-        jbtn_cancelar.addActionListener(new java.awt.event.ActionListener() {
+        jbtn_modificar.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
+        jbtn_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
+        jbtn_modificar.setText("Modificar Reserva");
+        jbtn_modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_cancelarActionPerformed(evt);
+                jbtn_modificarActionPerformed(evt);
             }
         });
 
         jbtn_Mostrar.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
         jbtn_Mostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mostrar.png"))); // NOI18N
-        jbtn_Mostrar.setText("Mostrar recervaciones");
+        jbtn_Mostrar.setText("Mostrar Reserva");
         jbtn_Mostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtn_MostrarActionPerformed(evt);
@@ -103,7 +102,7 @@ public class Menu extends javax.swing.JFrame {
 
         jbtn_Reservasion.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
         jbtn_Reservasion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-archivo.png"))); // NOI18N
-        jbtn_Reservasion.setText("Ralizar una Reservacion");
+        jbtn_Reservasion.setText("Ralizar una Reserva");
         jbtn_Reservasion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtn_ReservasionActionPerformed(evt);
@@ -112,48 +111,67 @@ public class Menu extends javax.swing.JFrame {
 
         jbtn_cancelar1.setFont(new java.awt.Font("Segoe UI", 3, 15)); // NOI18N
         jbtn_cancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cubo-de-la-basura.png"))); // NOI18N
-        jbtn_cancelar1.setText("Cancelar Recervacion");
+        jbtn_cancelar1.setText("Cancelar Reserva");
+        jbtn_cancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_cancelar1ActionPerformed(evt);
+            }
+        });
+
+        jbtn_salir.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jbtn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cerrar-sesion (2).png"))); // NOI18N
+        jbtn_salir.setText("SALIR");
+        jbtn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_salirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jbtn_cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtn_Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtn_Reservasion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(134, 134, 134)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbtn_Mostrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_cancelar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(174, 174, 174))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jbtn_modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jbtn_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbtn_salir)))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtn_Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_Reservasion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jbtn_Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtn_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .addComponent(jbtn_Reservasion, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,16 +186,30 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_ReservasionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_ReservasionActionPerformed
-        // TODO add your handling code here:
+                                                    
+        Ventas agregarReserva = new Ventas();
+        agregarReserva.show();
     }//GEN-LAST:event_jbtn_ReservasionActionPerformed
 
     private void jbtn_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_MostrarActionPerformed
-        // TODO add your handling code here:
+        
+        MostrarRecervacion mostrar = new MostrarRecervacion();
+        mostrar.show();
     }//GEN-LAST:event_jbtn_MostrarActionPerformed
 
-    private void jbtn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtn_cancelarActionPerformed
+    private void jbtn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_modificarActionPerformed
+        Modificar modificar = new Modificar();
+        modificar.show();
+    }//GEN-LAST:event_jbtn_modificarActionPerformed
+
+    private void jbtn_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cancelar1ActionPerformed
+        CancelarVenta cancelar = new CancelarVenta();
+        cancelar.show();
+    }//GEN-LAST:event_jbtn_cancelar1ActionPerformed
+
+    private void jbtn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_salirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jbtn_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,8 +253,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JButton jbtn_Mostrar;
     private javax.swing.JButton jbtn_Reservasion;
-    private javax.swing.JButton jbtn_cancelar;
     private javax.swing.JButton jbtn_cancelar1;
+    private javax.swing.JButton jbtn_modificar;
+    private javax.swing.JButton jbtn_salir;
     private javax.swing.JLabel jlblBienvenido;
     // End of variables declaration//GEN-END:variables
 
