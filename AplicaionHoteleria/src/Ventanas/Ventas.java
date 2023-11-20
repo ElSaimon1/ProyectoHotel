@@ -366,7 +366,7 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_PagarReservacionActionPerformed
 
     private void jbtn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_salirActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jbtn_salirActionPerformed
 
     private void jcbx_TipoHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbx_TipoHabitacionActionPerformed
